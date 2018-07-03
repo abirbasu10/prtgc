@@ -1,0 +1,18 @@
+$2y$10$Ri66uB.6C.GRDIin8YV05OvG31us/fNaPpvSk4bwP.jalJ/e0hdGC
+
+
+
+
+$stmt->bind_result($id, $username, $email, $gender);
+						$stmt->fetch();
+						
+						$user = array(
+							'id'=>$id, 
+							'username'=>$username, 
+							'email'=>$email,
+							'gender'=>$gender
+						);
+						
+						$response['error'] = false; 
+						$response['message'] = 'Login successfull'; 
+						$response['user'] = $user;
